@@ -1,5 +1,4 @@
-\documentclass[a4paper, twocolumn]{article}
-
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
 \title{Assignment 1}
 \author{Varenya Upadhyaya EP20BTECH11026}
 \date{}
@@ -9,55 +8,66 @@
 \usepackage{enumitem}
 \usepackage{multicol}
 \usepackage[english]{babel}
+\usepackage{listings}
 
 
-    \begin{document}
-    \maketitle   
-    \begin{center}
-    \section*{Problem 5.24}
-    \end{center}
-    One card is drawn from a well-shuffled deck of 52 cards. Calculate the probability that the card will:
-    \begin{enumerate}[label=(\roman*)]
-        \item be an ace,
-        \item not be an ace.
-    \end{enumerate}
-    \begin{center}
-    \maketitle
-        \section*{Solution}
-    \end{center}
-    It is known that the total number of cards in the deck is 52, out of which there are four aces. Let random variable $X \in \{0,1\}$ denote the possible outcomes of the experiment of drawing a card from the shuffled deck.\\
-    \begin{center}
-        \begin{tabular}{|c|c|c|}
-        \hline
-        \textbf{Card} & \textbf{X} & \textbf{Number}\\
-        \hline
-        Ace & 0 & n(X = 0) = 4\\
-        \hline
-        Not an Ace & 1 & n(X = 1) = 48\\
-        \hline
-        \end{tabular}
-    \end{center}
-    
-    
-    \begin{equation}
-        p(X=0) = \frac{n(X = 0)}{n(X = 0) + n(X = 1)} = \frac{4}{52}\\
-    \end{equation}
-    \begin{equation}
-        \Rightarrow p(X=0) = 0.076923\\
-    \end{equation}
-    Similarly,\\
-    \begin{equation}
-        p(X = 1) = \frac{n(X=1)}{n(X=0)+n(X=1)} = \frac{48}{52}
-    \end{equation}
-    \begin{equation}
-        \Rightarrow p(X=1) = 0.923077
-    \end{equation}
-    \\Hence, the required probabilities are:
-    \begin{enumerate}[label=(\roman*)]
-        \item 0.076923
-        \item 0.923077
-    \end{enumerate}
+\begin{document}
+\maketitle
+Download all python codes from: 
+\begin{lstlisting}[frame = single]
+https://github.com/varenya27/AI1103
+/blob/main/Assignment%201
+/Assignment_1.py
+\end{lstlisting}
+and latex-tikz codes from:
+\begin{lstlisting} [frame = single]
+https://github.com/varenya27/AI1103
+/blob/main/Assignment%201/main.tex
+\end{lstlisting}
+\maketitle   
+\begin{center}
+\section*{Problem 5.24}
+\end{center}
+One card is drawn from a well-shuffled deck of 52 cards. Calculate the probability that the card will:
+\begin{enumerate}[label=(\roman*)]
+    \item be an ace,
+    \item not be an ace.
+\end{enumerate}
+\begin{center}
+\maketitle
+    \section*{Solution}
+\end{center}
+It is known that the total number of cards in the deck is 52, out of which there are four aces. Let random variable $X \in \{0,1\}$ denote the possible outcomes of the experiment of drawing a card from the shuffled deck.\\
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Card} & \textbf{X} & \textbf{Number}\\
+    \hline
+    Ace & 0 & n(X = 0) = 4\\
+    \hline
+    Not an Ace & 1 & n(X = 1) = 48\\
+    \hline
+    \end{tabular}
+\end{center}
+
+
+\begin{equation}
+    p(X=0) = \frac{n(X = 0)}{n(X = 0) + n(X = 1)} = \frac{4}{52}\\
+\end{equation}
+\begin{equation}
+    \Rightarrow p(X=0) = 0.076923\\
+\end{equation}
+Similarly,\\
+\begin{equation}
+    p(X = 1) = \frac{n(X=1)}{n(X=0)+n(X=1)} = \frac{48}{52}
+\end{equation}
+\begin{equation}
+    \Rightarrow p(X=1) = 0.923077
+\end{equation}
+\\Hence, the required probabilities are:
+\begin{enumerate}[label=(\roman*)]
+    \item 0.076923
+    \item 0.923077
+\end{enumerate}
 \end{document}
-
-
 
