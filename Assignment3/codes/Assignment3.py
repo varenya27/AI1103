@@ -29,27 +29,20 @@ prob = su_/ite
 print('probability: ',prob)
 
 #plotting the graphs 
+
 prob_plot = []
 prob_cal = []
-for x in range(5):
+for x in range(4):
     prob_plot.append(get_probability(num_samples, 10))
     prob_cal.append(1/2)
+x = np.arange(1,5)
 
-labels = [1, 2, 3, 4, 5]
-
-x = np.arange(len(labels))  # the label locations
-width = 0.35  # the width of the bars
-
-fig, ax = plt.subplots()
-rects1 = ax.bar(x - width/2, prob_plot, width)
-rects2 = ax.bar(x + width/2, prob_cal, width)
 plt.ylim(0,0.75)
-ax.set_ylabel('Probability')
-ax.set_xlabel('Simulation ID')
-ax.set_title('Simulation vs Theoretical')
-ax.set_xticks(x)
-ax.set_xticklabels(labels)
-ax.legend(labels=['Simulated', 'Calculated'])
-
-
+plt.stem(x,prob_plot, markerfmt='o', use_line_collection=True, label='Simulation')
+plt.stem(x,prob_cal, markerfmt='o',use_line_collection=True, label='Analysis')
+plt.xlabel('Simulation')
+plt.ylabel('Probability')
+plt.xticks( x)
+plt.legend()
+plt.grid()
 plt.show()
