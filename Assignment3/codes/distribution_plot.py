@@ -17,8 +17,9 @@ plt.vlines(x=[2.3, 2.3+np.pi], ymin=[0,0], ymax=[1/(2*np.pi), 1/(2*np.pi)], ls='
 section = np.arange(2.3, np.pi+2.3, 1/20.)
 for i in range(63):
   section_=[1/(2*np.pi)]
-
 plt.fill_between(section,section_, color = 'r')
-
-
+plt.xticks([0,np.pi,np.pi/2,2*np.pi, 3/2*np.pi])
+plt.yticks([0,1/(2*np.pi),1/(4*np.pi),3/(4*np.pi)])
+plt.xlabel('\u03B8 values')
+plt.ylabel('Density Function')
 plt.show() 
