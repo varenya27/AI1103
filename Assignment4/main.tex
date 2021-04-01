@@ -149,7 +149,7 @@ A fair dice is rolled twice. The probability that an odd number will follow an e
 
 \maketitle
 \section*{Solution}
-The number on the face of a fair die can be either odd or even, let a random variable $X \in \{0,1\}$ denote the possible outcomes of the event of rolling a die.
+Let a random variable $X \in \{0,1\}$ denote the possible outcomes of the event of rolling a die.
 \begin{table}[h]
 \centering
 % \resizebox{\columnwidth}{!}{
@@ -166,17 +166,14 @@ The number on the face of a fair die can be either odd or even, let a random var
 \\
 \caption{Outcome of the Experiment} 
 \label{table=1}
-\end{table}\\
-The probability of getting an even number can then be calculated as,
+\end{table}
 \begin{align}
     \pr{X=0} &= \frac{n(X=0)}{n(X=0)+n(X=1)} = \frac{3}{6} \\
+    &= \frac{1}{2}\\
+    \pr{X=1} &= \frac{n(X=1)}{n(X=0)+n(X=1)} = \frac{3}{6} \\
     &= \frac{1}{2}
 \end{align}
-Similarly,
-\begin{align}
-    \pr{X=1} = \frac{1}{2}
-\end{align}
-In the experiment, the die is rolled twice. Let $E$ denote the event of getting an even number in the first throw and then an odd number in the second. The probability of this happening can be calculated as:
+If $E$ denotes the event that an odd number follows an even then,
 \begin{align}
     \pr{E} &= \pr{X=0} \times \pr{X=1}\\
     &= \frac{1}{2}\times\frac{1}{2}\\
