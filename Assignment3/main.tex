@@ -177,21 +177,29 @@ where $a \in [0,r]$ and $\theta \in [0, 2\pi]$.
     \implies a\sin\theta &\geq ma\cos\theta\\
     \implies \tan\theta &\geq m\\
     \implies \theta &\in [\arctan m, \pi+\arctan m]
-\end{align}
-Let \textbf{A} denote the set $[\arctan m, \pi + \arctan m]$ and \textbf{B} denote the $[0,2\pi]$. Then,
+\end{align}\\
+The graph of the distribution function of $\theta$ will be a horizontal line above the x axis in $[0,2\pi]$.
 \begin{align}
-    n(Z=1) = n(\textbf{A})\\
-    n(Z=1)+n(Z=0) = n(\textbf{B})
+    \pr{0\leq\theta\leq2\pi} = 1\\
+    \implies f(\theta)\times2\pi=1
 \end{align}
-The required probability can then be calculated as
+The value of the constant function will be $\dfrac{1}{2\pi}$
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\columnwidth]{distribution_2.png}
+    \caption{Distribution function of $\theta$}
+    \label{fig:my_label}
+\end{figure}\\
+The shaded region represents the required probability. 
 \begin{align}
-    \pr{Z=1} &= \frac{n(Z=1)}{n(Z=1)+n(Z=0)}\\
-    &=\frac{n(\textbf{A})}{n(\textbf{B})}\\
-    &=\frac{\pi+\arctan m - \arctan m}{2\pi-0}\\
+    \pr{\arctan m\leq\theta\leq\arctan m +\pi}\nonumber\\
+    =\displaystyle\int\limits_{\arctan m}^{\pi + \arctan m} f(\theta) \,d\theta
+\end{align}
+\begin{align}
+    &=\displaystyle\int\limits_{\arctan m}^{\pi + \arctan m} \frac{1}{2\pi} \,d\theta\\
+    &=\frac{\pi}{2\pi}\\
     &=\frac{1}{2}
 \end{align}
 \\ $\therefore$ option (c) is correct.
-
-
 \end{document}
 
