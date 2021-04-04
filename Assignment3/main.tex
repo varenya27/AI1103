@@ -174,32 +174,59 @@ The coordinates $(X,Y)$ can be parametrized as follows:
 where $a \in [0,r]$ and $\theta \in [0, 2\pi]$. 
 \begin{align}
     Y &\geq mX\\
-    \implies a\sin\theta &\geq ma\cos\theta\\
-    \implies \tan\theta &\geq m\\
-    \implies \theta &\in [\arctan m, \pi+\arctan m]
-\end{align}\\
-The graph of the distribution function of $\theta$ will be a horizontal line above the x axis in $[0,2\pi]$.
-\begin{align}
-    \pr{0\leq\theta\leq2\pi} = 1\\
-    \implies f(\theta)\times2\pi=1
+    \implies a\sin\theta &\geq ma\cos\theta
 \end{align}
-The value of the constant function will be $\dfrac{1}{2\pi}$
+
 \begin{figure}[h]
+    \centering
+    \includegraphics[width=\columnwidth]{tanx.png}
+    \caption{$tan\theta$ with $m=2.5$}
+    \label{fig:my_label}
+\end{figure}
+
+This gives two cases,
+\begin{enumerate}
+    \item when $\theta\in [0,\dfrac{\pi}{2}]\cup[\dfrac{3\pi}{2},2\pi]$
+    \begin{align}
+        \tan\theta&\geq m\\
+        \implies \theta &\in [\tan^{-1}m, \pi/2]
+    \end{align}
+    \item when $\theta \in [\dfrac{\pi}{2}, \dfrac{3\pi}{2}]$
+    \begin{align}
+        \tan\theta&\leq m\\
+        \implies \theta &\in [\pi/2, \pi+\tan^{-1}m]
+    \end{align}
+\end{enumerate}
+\begin{align}
+    \therefore \theta &\in [\tan^{-1} m, \pi+\tan^{-1} m]
+\end{align}
+
+$\theta$ will have a uniform probability distribution function: 
+\begin{align}
+    f(\theta)=\nonumber
+    \begin{cases}
+    0 &\text{if } \theta<0\\
+    \dfrac{1}{2\pi} & \text{if } 0\leq\theta\leq2\pi\\
+    0 &\text{if } \theta>2\pi
+    \end{cases}
+\end{align}
+The shaded region of the figure below represents the required probability. 
+\begin{align}
+    \pr{\arctan m\leq\theta\leq\tan^{-1} m +\pi}\nonumber\\
+    =\displaystyle\int\limits_{\tan^{-1} m}^{\pi + \tan^{-1} m} f(\theta) \,d\theta
+\end{align}
+\begin{align}
+    &=\displaystyle\int\limits_{\tan^{-1} m}^{\pi + \tan^{-1} m} \frac{1}{2\pi} \,d\theta\\
+    &=\frac{\pi}{2\pi}\\
+    &=\frac{1}{2}
+\end{align}
+\begin{figure}[h!]
     \centering
     \includegraphics[width=\columnwidth]{distribution_2.png}
     \caption{Distribution function of $\theta$}
     \label{fig:my_label}
 \end{figure}\\
-The shaded region represents the required probability. 
-\begin{align}
-    \pr{\arctan m\leq\theta\leq\arctan m +\pi}\nonumber\\
-    =\displaystyle\int\limits_{\arctan m}^{\pi + \arctan m} f(\theta) \,d\theta
-\end{align}
-\begin{align}
-    &=\displaystyle\int\limits_{\arctan m}^{\pi + \arctan m} \frac{1}{2\pi} \,d\theta\\
-    &=\frac{\pi}{2\pi}\\
-    &=\frac{1}{2}
-\end{align}
 \\ $\therefore$ option (c) is correct.
 \end{document}
+
 
