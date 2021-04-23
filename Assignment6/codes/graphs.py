@@ -29,7 +29,7 @@ plt.vlines(x=theta, ymin=-n//2, ymax=n, ls='--')
 
 #labels:
 plt.xlabel('$x$')
-# plt.ylabel('$Q(x)$')
+# plt.ylabel('$P_{Y_1}$')
 plt.ylabel('$Z_{100}$')
 
 plt.show() 
