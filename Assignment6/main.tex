@@ -150,8 +150,7 @@ Let $Y_1$ denote the first order statistic in a random sample of size $n$ from a
 Obtain the distribution of $Z_n = n(Y_1 - \theta)$\\
 \maketitle
 \section{\textbf{Solution}}
-The first order statistic for any sample is the the minimum of the given sample 
-In order to calculate the distribution for $Y_1$, we need the the cumulative distribution function $F(x)$:\\
+The first order statistic for any sample is the the minimum of the given sample. In order to calculate the distribution for $Z_n$, we need the the cumulative distribution function $F(x)$:\\
 \begin{align}
   F(x) &=\displaystyle\int\limits_{-\infty}^{x} f(t) \,dt\\
   &= \displaystyle\int\limits_{-\infty}^{\theta}0\,dt + \displaystyle\int\limits_{\theta}^{x}e^{\theta-t}\,dt\\
@@ -167,21 +166,21 @@ This gives,
     0 &\text{otherwise}
     \end{cases}
 \end{align}
-Now,
+Also,
 \begin{align}
     F(x) = \pr{X\leq x}\\
-    \implies 1-F(x) = \pr{X>x}
+    \implies 1-F(x) = \pr{X>x}\\
+    Y_1 = \textit{min}\{X_1, X_2, ... X_n\}
 \end{align}
-We need to calculate the pdf for $Z_n = n(Y_1=\theta)$. Let $f_{Z_n}(z)$ and $F_{Z_n}(z)$ be the pdf and cdf for $Z_n$ respectively.
+Distributions for $Z_n = n(Y_1-\theta)$ are required; let $f_{Z_n}(z)$ and $F_{Z_n}(z)$ be the pdf and cdf for $Z_n$ respectively. The cdf can be calculated as: 
 \begin{align}
-    Y_1 &= \textit{min}\{X_1, X_2, ... X_n\}\\
     F_{Z_n}(z) &= \pr{n(Y_1-\theta\leq z}\\
     &= \pr{Y_1\leq \frac{z}{n} +\theta}\\
     &= 1-\pr{Y_1\ > \frac{z}{n} +\theta}\label{eq_2}
 \end{align}
-Since $Y_1$ is a minimum order statistic, every term in the random sample must satisfy \eqref{eq_2}. Let $\brak{\dfrac{z}{n}+\theta} = z'$:
+Since $Y_1$ is a minimum order statistic, every term in the random sample must be included in \eqref{eq_2}. Let $\brak{\dfrac{z}{n}+\theta} = z'$:
 \begin{align}
-    F_{Z_n}(z')&= 1-\pr{X_1>z', X_2>z', ..., X_n>z'}\nonumber\\
+    F_{Z_n}&= 1-\pr{X_1>z', X_2>z', ..., X_n>z'}\nonumber\\
     &= 1-\prod_{i=1}^{n}\pr{X_i>z'}\nonumber\\
     &= 1-\brak{1-F(z')}^n\nonumber\\
     \implies F_{Z_n}(z) &= 1-\brak{1-F\brak{\frac{z}{n}+\theta}}^n\label{eq_3}\\
