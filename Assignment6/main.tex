@@ -190,7 +190,7 @@ The expression for the cdf can thus be written as:
 \begin{align}
     F_{Z_n}(z) &=\nonumber
     \begin{cases}
-    1-e^{-n(\frac{z}{n}+\theta-\theta)}&\text{when } \theta<\frac{z}{n}+\theta<\infty\\
+    1-e^{-n\brak{\frac{z}{n}+\theta-\theta}}&\text{when } \theta<\frac{z}{n}+\theta<\infty\\
     0&\text{otherwise}
     \end{cases}\\
     &= \begin{cases}
@@ -198,28 +198,19 @@ The expression for the cdf can thus be written as:
     0 &\text{otherwise}\label{cdf}
     \end{cases}
 \end{align}
-Using the cdf in \eqref{eq_3} to calculate the pdf:
+Using the cdf in \eqref{cdf} to calculate the pdf:\\
 \begin{align}
-    f_{Z_n}(z) &= \frac{d}{dz}F_{Z_n}(z)\nonumber\\
-    &= \frac{d}{dz}\brak{1-\brak{1-F\brak{\frac{z}{n}+\theta}}^n}\nonumber\\
-    &= -n\brak{1-F\brak{\frac{z}{n}+\theta}}^{n-1}\times\frac{d}{dz}\brak{1-F\brak{\frac{z}{n}+\theta}}\nonumber\\
-    &= -n\times\brak{f\brak{\frac{z}{n}+\theta}}^{n-1}\times\brak{\frac{-1}{n}}\times\brak{f\brak{\frac{z}{n}+\theta}}\nonumber\\
-    &= \brak{f\brak{\frac{z}{n}+\theta}}^n\label{eq_4}
-\end{align}
-Putting the expression for $f(x)$ in \eqref{eq_4}:
-\begin{align}
-    f_{Z_n}(z) &=\nonumber
-    \begin{cases}
-    e^{n\brak{\theta-\brak{\frac{z}{n}+\theta}}}& \text{when } 0<z<\infty\\
-    0&\text{otherwise}
-    \end{cases}\\
-    &= 
-    \begin{cases}
-    e^{-z} &\text{when } 0<z<\infty\\
+    f_{Z_n}(z) &= \frac{d}{dz}F_{Z_n}(z)\\
+    &= \begin{cases}
+    \dfrac{d}{dz}\brak{1-e^{-z}}&\text{when } 0<z<\infty\\\\
+    \dfrac{d}{dz}\brak{0}&\text{otherwise}
+    \end{cases}\nonumber\\
+    &=\begin{cases}
+    e^{-z}&\text{when } 0<z<\infty\\
     0&\text{otherwise}
     \end{cases}\label{pdf}
 \end{align}
-The plots for the cdf in \eqref{cdf} and the pdf in \eqref{pdf} are shown in Fig. \ref{fig_cdf} and Fig. \ref{fig_pdf} respectively:
+\\The plots for the cdf in \eqref{cdf} and the pdf in \eqref{pdf} are shown in Fig. \ref{fig_cdf} and Fig. \ref{fig_pdf} respectively:
 \begin{figure}[H]
     \centering
     \includegraphics[width=\columnwidth]{cdf.png}
@@ -232,12 +223,6 @@ The plots for the cdf in \eqref{cdf} and the pdf in \eqref{pdf} are shown in Fig
     \caption{pdf of $Z_n$}
     \label{fig_pdf}
 \end{figure}
-
-
-
-
-
-
 
 
 
